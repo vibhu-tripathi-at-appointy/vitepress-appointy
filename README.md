@@ -26,3 +26,21 @@ Please make sure to read the [Contributing Guide](https://github.com/vuejs/vitep
 [MIT](https://github.com/vuejs/vitepress/blob/main/LICENSE)
 
 Copyright (c) 2019-present, Yuxi (Evan) You
+
+## Firebase Authentication
+
+The documentation site can be secured using Firebase Auth. Configure the
+following environment variables (see `.env.example`):
+
+```
+VITE_FIREBASE_API_KEY=<api-key>
+VITE_FIREBASE_AUTH_DOMAIN=<auth-domain>
+VITE_FIREBASE_PROJECT_ID=<project-id>
+VITE_FIREBASE_APP_ID=<app-id>
+```
+
+Only users signed in with an `@appointy.com` email will be able to access the
+docs.
+
+Use the `<Login />` component on `/login` to sign in. A `<SignOut />` component
+is also available to end the session.
